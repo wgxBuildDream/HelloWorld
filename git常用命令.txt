@@ -44,5 +44,5 @@ git push <远程主机名> <本地分支名>:<远程分支名>
 git pull [origin] [remote branch]:[local branch]：将远程指定分支代码拉取下来，与本地分支合并，相当于fetch+merge
                                                   如果本地工作空间相较于远程指定分支代码有新增文件，拉取下来后不会将其覆盖，新增文件会被标记为未添加至暂存区状态，根据需要进行add、commit操作后，再进行push更新远程代码仓
 5.2 fetch + merge
-git fetch:
-git merge:
+git fetch [orgin] [remote-branch]: 将远程分支最新代码拉取至本地代码仓，但并未更新本地工作空间代码
+git merge [branch]: 将指定分支与当前分支合并，可以是本地分支与远程分支合并，也可以是远程分支与本地分析合并，当出现冲突时，可以使用git diff查看冲突内容，并修改，然后再进行add、git merge --continue
